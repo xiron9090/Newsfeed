@@ -12,5 +12,6 @@ module.exports = {
         allowUndefined: true,
       },
     ],
+    ['@babel/plugin-proposal-decorators', {legacy: true}],
   ],
 };
