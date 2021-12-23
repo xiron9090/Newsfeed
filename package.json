@@ -7,7 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "build:apk": "cd ./android &&./gradlew assembleRelease --stacktrace",
+    "install:release:arm": "cd ./android/app/build/outputs/apk/release/  && adb install app-release.apk ",
+    "android:clean": "cd ./android && ./gradlew clean",
+    "pod:install": "cd ./ios && pod install"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.14",
@@ -18,7 +22,6 @@
     "add": "^2.0.6",
     "axios": "^0.24.0",
     "i18next": "^21.6.3",
-    "inversify": "^6.0.1",
     "react": "17.0.2",
     "react-i18next": "^11.15.1",
     "react-native": "0.66.4",
@@ -26,6 +29,7 @@
     "react-native-localize": "^2.1.6",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.10.1",
+    "react-native-splash-screen": "^3.3.0",
     "react-native-vector-icons": "^9.0.0",
     "react-redux": "^7.2.6",
     "redux": "^4.1.2",

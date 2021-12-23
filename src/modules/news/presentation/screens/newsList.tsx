@@ -9,6 +9,7 @@ import {
   Text,
   View,
 } from 'react-native';
+import { height } from '../../../../shared/utils/constanst';
 import withReduxConnector, {fromRedux} from '../../application/redux/container';
 import {Card} from '../components/card';
 import Loading from '../components/loading';
@@ -42,7 +43,8 @@ const NewsList: React.FC<fromRedux> = ({
             </Text>
 
             <FlatList
-              style={{alignSelf: 'center'}}
+            showsVerticalScrollIndicator={false}
+              style={{alignSelf: 'center', marginBottom:height/4}}
               data={news}
               renderItem={item => <Card key={item.index} article={item.item} />}
             />
