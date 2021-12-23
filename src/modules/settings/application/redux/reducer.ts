@@ -16,7 +16,7 @@ type SettignScreenReducerState = {
   error: any;
 };
 const initialState: SettignScreenReducerState = {
-  language: 'en_US',
+  language: 'en',
   theme: 'ligth',
   error: null,
 };
@@ -53,7 +53,6 @@ const settingsScreenReducer: Reducer<
       return {...state, error: action.data.error};
     }
     case CHANGE_LANGUAGE: {
-      console.log(action.data);
       return {...state, language: action.data, error: null};
     }
     case CHANGE_THEME: {

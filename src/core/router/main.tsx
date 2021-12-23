@@ -1,73 +1,39 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {NavigationContainer} from '@react-navigation/native';
+import {
+  DarkTheme,
+  DefaultTheme,
+  NavigationContainer,
+} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, {useEffect} from 'react';
 import {navigationRef} from '.';
 import {ScreensRoute} from '../../shared/utils/constanst';
-import SettingScreen from '../../modules/settings/presentation/screens/Settings';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import NewsList from '../../modules/news/presentation/screens/newsList';
 import withReduxConnector, {fromRedux} from '../../core/redux/container';
 import LanguageSelectorScreen from '../../modules/settings/presentation/screens/LanguageSelectorScreen';
 import i18n from 'i18next';
 import {initReactI18next, useTranslation} from 'react-i18next';
 import config from '../config';
+import Tab from './tab';
 
-const TabNavigator = createBottomTabNavigator();
-const Tab: React.FC = () => {
-  const {t} = useTranslation();
-  return (
-    <TabNavigator.Navigator
-      screenOptions={({route}) => ({
-        tabBarIcon: ({color, size}) => {
-          let iconName = '';
-
-          if (route.name === ScreensRoute.NewsScreen) {
-            iconName = 'newspaper';
-          } else if (route.name === ScreensRoute.SettingsScreen) {
-            iconName = 'tools';
-          }
-
-          // You can return any component that you like here!
-          return <Icon name={iconName} size={size} color={color} />;
-        },
-        tabBarActiveTintColor: 'tomato',
-        tabBarInactiveTintColor: 'gray',
-        headerShown: false,
-      })}>
-      <TabNavigator.Screen
-        name={ScreensRoute.NewsScreen}
-        component={NewsList}
-        options={{title: t('news')}}
-      />
-      <TabNavigator.Screen
-        name={ScreensRoute.SettingsScreen}
-        component={SettingScreen}
-        options={{title: t('settings')}}
-      />
-    </TabNavigator.Navigator>
-  );
-};
+i18n.use(initReactI18next).init({
+  resources: config.resourcesLanguage,
+  lng: config.defaultLanguage,
+  compatibilityJSON: 'v3',
+});
 const MainStack = createNativeStackNavigator();
 const Main: React.FC<fromRedux> = ({
   onGetDeviceLanguage,
   onGetDeviceTheme,
-  language,
+  theme,
 }) => {
   useEffect(() => {
     onGetDeviceLanguage();
     onGetDeviceTheme();
-  }, []);
-  useEffect(() => {
-    console.log(language);
-    i18n.use(initReactI18next).init({
-      resources: config.resourcesLanguage,
-      lng: language ? language : config.defaultLanguage,
-      compatibilityJSON: 'v3',
-    });
-  }, [language]);
+  }, [onGetDeviceLanguage, onGetDeviceTheme]);
+  const {t} = useTranslation();
   return (
-    <NavigationContainer ref={navigationRef}>
+    <NavigationContainer
+      ref={navigationRef}
+      theme={theme === 'dark' ? DarkTheme : DefaultTheme}>
       <MainStack.Navigator
         initialRouteName={ScreensRoute.NewsScreen}
         screenOptions={{headerShown: false}}>
@@ -78,7 +44,10 @@ const Main: React.FC<fromRedux> = ({
         <MainStack.Screen
           name={ScreensRoute.LanguageSelectorScreen}
           component={LanguageSelectorScreen}
-          options={{headerShown: true}}
+          options={{
+            headerShown: true,
+            title: t(ScreensRoute.LanguageSelectorScreen.toLowerCase()),
+          }}
         />
       </MainStack.Navigator>
     </NavigationContainer>

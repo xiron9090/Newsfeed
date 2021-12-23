@@ -3447,10 +3447,10 @@ human-signals@^1.1.1:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
   integrity sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
 
-i18next@^21.6.2:
-  version "21.6.2"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-21.6.2.tgz#3bfc35fc3ac32541a2a5b80f1dc5306c994dd14f"
-  integrity sha512-S1zSTrs2lgPH8iG68pMWh3P7OzQMcs3+Qr5F39JTyGbe/xl5cW4cF8MTPKSy6F25tFTcKBq915IoEZUWewkldg==
+i18next@^21.6.3:
+  version "21.6.3"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-21.6.3.tgz#6ab6ab1020e1f3bda71c4d1dc216ac39663d6641"
+  integrity sha512-2uuRGslNQ8m7TRllsVs4cZuei5X9OgoPRB/Sj5oadUpxZaW+NYv3srn7zR+h8bCMhkux9z8HtnJdQM5Mz+Govw==
   dependencies:
     "@babel/runtime" "^7.12.0"
 
@@ -5637,6 +5637,11 @@ react-native-flipper@^0.125.0:
   version "0.125.0"
   resolved "https://registry.yarnpkg.com/react-native-flipper/-/react-native-flipper-0.125.0.tgz#684ded2b43cf62bb037a47e4098f590ceb22c699"
   integrity sha512-Ahql6yMRcI/ZHrf8YlIyyaWdv6X4be9uRYVgYphYHtHPuaTpINXOu+Sqhb+OhRzb7wqa2lvCU8bo7AgG33iSyg==
+
+react-native-localize@^2.1.6:
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/react-native-localize/-/react-native-localize-2.1.6.tgz#2d3e98ca9a2115ee8f0eca4e3116219893144123"
+  integrity sha512-3vwo+bx/jm4yPlXi3OORj4vWav9EQnU+e1aaG4EpfGt6v9goMn5CJSIfA4Vu1ohL3hfL8QUHj20TvKJsdMpfXQ==
 
 react-native-safe-area-context@^3.3.2:
   version "3.3.2"

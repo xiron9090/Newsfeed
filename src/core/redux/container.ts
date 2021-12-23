@@ -3,11 +3,15 @@ import {
   getDeviceLanguage,
   getDeviceTheme,
 } from '../../modules/settings/application/redux/action';
-import {getLanguage} from '../../modules/settings/application/redux/selector';
+import {
+  getLanguage,
+  getTheme,
+} from '../../modules/settings/application/redux/selector';
 import {RootReducerState} from './root.reducer';
 
 const mapStateToProps = (state: RootReducerState) => ({
   language: getLanguage(state),
+  theme: getTheme(state),
 });
 
 const mapDispatchToProps = {
@@ -19,7 +23,7 @@ const mergesProps = (
   dispatchProps: typeof mapDispatchToProps,
 ) => ({
   language: stateProps.language,
-
+  theme: stateProps.theme,
   onGetDeviceLanguage: dispatchProps.getDeviceLanguage,
   onGetDeviceTheme: dispatchProps.getDeviceTheme,
 });

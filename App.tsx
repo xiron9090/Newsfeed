@@ -12,7 +12,6 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import store from './src/core/redux/store';
 import Main from './src/core/router/main';
-
 const App = () => {
   return (
     <Provider store={store}>

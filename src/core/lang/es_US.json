@@ -1,12 +1,13 @@
 {
-  "news":"Noticias",
-    "displayLanguage":"Idioma de la pantalla",
-    "theme":"Tema oscuro",
-    "settings":"Configuracion",
-    "language":"Idioma",
-    "changeLanguage":"Cambiar idioma",
-    "cancel":"Cancelar",
-    "accept":"Aceptar",
-    "Spanish":"Español",
-    "Inglish":"Ingles"
+  "news": "Noticias",
+  "displayLanguage": "Idioma de la pantalla",
+  "theme": "Tema oscuro",
+  "settings": "Configuracion",
+  "language": "Idioma",
+  "changeLanguage": "Cambiar idioma",
+  "cancel": "Cancelar",
+  "accept": "Aceptar",
+  "Spanish": "Español",
+  "Inglish": "Ingles",
+  "languageselectorscreen": "Idioma"
 }
