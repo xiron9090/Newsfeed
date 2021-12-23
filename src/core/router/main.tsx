@@ -13,6 +13,7 @@ import i18n from 'i18next';
 import {initReactI18next, useTranslation} from 'react-i18next';
 import config from '../config';
 import Tab from './tab';
+import NewsDetails from '../../modules/news/presentation/screens/newsDetails';
 
 i18n.use(initReactI18next).init({
   resources: config.resourcesLanguage,
@@ -26,7 +27,7 @@ const Main: React.FC<fromRedux> = ({
   theme,
 }) => {
   useEffect(() => {
-    onGetDeviceLanguage();
+    // onGetDeviceLanguage();
     onGetDeviceTheme();
   }, [onGetDeviceLanguage, onGetDeviceTheme]);
   const {t} = useTranslation();
@@ -47,6 +48,14 @@ const Main: React.FC<fromRedux> = ({
           options={{
             headerShown: true,
             title: t(ScreensRoute.LanguageSelectorScreen.toLowerCase()),
+          }}
+        />
+        <MainStack.Screen
+          name={ScreensRoute.NewsDetails}
+          component={NewsDetails}
+          options={{
+            headerShown: true,
+            title: t(ScreensRoute.NewsDetails.toLowerCase()),
           }}
         />
       </MainStack.Navigator>

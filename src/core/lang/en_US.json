@@ -1,11 +1,15 @@
 {
-    "news":"news",
-    "displayLanguage":"Display language",
-    "theme":"Dark theme",
-    "settings":"Settings",
-    "language":"Language",
-    "changeLanguage":"Change language",
-    "Spanish":"Spanish",
-    "Inglish":"Inglish",
-    "languageselectorscreen":"Language"
+  "news": "news",
+  "displayLanguage": "Display language",
+  "theme": "Dark theme",
+  "settings": "Settings",
+  "language": "Language",
+  "changeLanguage": "Change language",
+  "Spanish": "Spanish",
+  "Inglish": "Inglish",
+  "languageselectorscreen": "Language",
+  "seeFullSourceArticle": "See full source article",
+  "newsdetails": "News",
+  "error": "There was an error loading the news",
+  "mainTitulares": "Main titulares"
 }

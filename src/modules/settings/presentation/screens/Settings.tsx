@@ -1,6 +1,13 @@
 import React, {useState} from 'react';
 import withReduxConnector, {fromRedux} from '../../application/redux/container';
-import {StyleSheet, Switch, Text, TouchableOpacity, View} from 'react-native';
+import {
+  Platform,
+  StyleSheet,
+  Switch,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {height, width} from '../../../../shared/utils/constanst';
 import {navigateTo} from '../../../../core/router';
@@ -55,9 +62,11 @@ const SettingScreen: React.FC<fromRedux> = ({theme, onChangeTheme}) => {
               ? theme === 'dark'
                 ? colors.primary
                 : colors.border
+              : Platform.OS === 'ios'
+              ? colors.border
               : colors.primary
           }
-          ios_backgroundColor={colors.primary}
+          ios_backgroundColor={colors.notification}
           onValueChange={value => toggleSwitch(value)}
           value={theme === 'dark' ? true : false}
         />

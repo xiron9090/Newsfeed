@@ -16,7 +16,7 @@ type SettignScreenReducerState = {
   error: any;
 };
 const initialState: SettignScreenReducerState = {
-  language: 'en',
+  language: 'en_US',
   theme: 'ligth',
   error: null,
 };
