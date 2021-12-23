@@ -2,7 +2,7 @@ import {Dimensions} from 'react-native';
 
 export enum ScreensRoute {
   NewsScreen = 'News',
-  NewsDetailsScree = 'NewsDetailsScreen',
+  NewsDetails = 'NewsDetails',
   SettingsScreen = 'Settings',
   BottomTabNavigator = 'BottomTabNavigator',
   LanguageSelectorScreen = 'LanguageSelectorScreen',

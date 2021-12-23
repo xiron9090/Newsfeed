@@ -1,4 +1,5 @@
 import {createNavigationContainerRef} from '@react-navigation/native';
+import {IArticle} from '../../modules/news/domain/news.interface';
 import {ScreensRoute} from '../../shared/utils/constanst';
 
 const navigationRef = createNavigationContainerRef();
@@ -15,7 +16,8 @@ const goBack = () => {
 };
 
 const newsNavigation = () => navigate(ScreensRoute.NewsScreen);
-const newsDetailsNavigation = () => navigate(ScreensRoute.NewsDetailsScree);
+const newsDetailsNavigation = (params: IArticle) =>
+  navigate(ScreensRoute.NewsDetails, params);
 const settingsNavigation = () => navigate(ScreensRoute.SettingsScreen);
 const LanguageSelectorScreen = () =>
   navigate(ScreensRoute.LanguageSelectorScreen);
