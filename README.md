@@ -27,7 +27,7 @@
 - Support for light and dark theme
 - News list and access to the original source
 
-Download for Android [here](data/apk/app-release.apk)
+
 
 ### Tags
 - React native
