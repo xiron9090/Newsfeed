@@ -1,15 +1,26 @@
 # News Fed
-## Ios
-<img src="data/images/ios.png" alt="drawing" width="150"/>
-<img src="data/images/ios1.png" alt="drawing" width="150"/>
-<img src="data/images/ios2.png" alt="drawing" width="150"/>
-<img src="data/images/ios3.png" alt="drawing" width="150"/>
-
-## Android
-<img src="data/images/android.jpeg" alt="drawing" width="150"/>
-<img src="data/images/android1.jpeg" alt="drawing" width="150"/>
-<img src="data/images/android2.jpeg" alt="drawing" width="150"/>
-<img src="data/images/android3.jpeg" alt="drawing" width="150"/>
+<table border="0" >
+ <tr>
+    <td><b style="font-size:30px">Ios</b></td>
+    <td><b style="font-size:30px">Android</b></td>
+ </tr>
+ <tr>
+    <td><img src="data/images/ios.png" alt="drawing" width="150"/></td>
+    <td><img src="data/images/android.jpeg" alt="drawing" width="150"/></td>
+ </tr>
+ <tr>
+    <td><img src="data/images/ios1.png" alt="drawing" width="150"/></td>
+    <td><img src="data/images/android2.jpeg" alt="drawing" width="150"/></td>
+ </tr>
+ <tr>
+    <td><img src="data/images/ios2.png" alt="drawing" width="150"/></td>
+    <td><img src="data/images/android1.jpeg" alt="drawing" width="150"/></td>
+ </tr>
+ <tr>
+    <td><img src="data/images/ios3.png" alt="drawing" width="150"/></td>
+    <td><img src="data/images/android3.jpeg" alt="drawing" width="150"/></td>
+ </tr>
+</table>
 
 ## Feacture
 - Support for multiples. Languages
@@ -29,5 +40,6 @@ Download for Android [here](data/apk/app-release.apk)
 - Rest
 - Clean architecture
 - Driver Domain Desing
+
 
  
