@@ -17,3 +17,17 @@
 - News list and access to the original source
 
 Download for Android [here](data/apk/app-release.apk)
+
+### Tags
+- React native
+- Redux
+- I18n
+- Typescript
+- Axios
+- Android 
+- Ios
+- Rest
+- Clean architecture
+- Driver Domain Desing
+
+ 
