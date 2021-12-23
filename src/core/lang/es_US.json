@@ -9,5 +9,9 @@
   "accept": "Aceptar",
   "Spanish": "Español",
   "Inglish": "Ingles",
-  "languageselectorscreen": "Idioma"
+  "languageselectorscreen": "Idioma",
+  "seeFullSourceArticle":"Ver articulo completo de la fuente",
+  "newsdetails":"Noticia",
+  "error":"Ha corrido un error al cargar las noticias",
+  "mainTitulares": "Principales titulares"
 }
