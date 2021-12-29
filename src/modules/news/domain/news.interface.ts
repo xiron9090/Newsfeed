@@ -1,5 +1,4 @@
 export interface IParamsGetNews {
-  country: string;
   language: string;
 }
 export interface INews {

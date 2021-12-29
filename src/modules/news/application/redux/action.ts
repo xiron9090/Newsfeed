@@ -10,16 +10,16 @@ import {
 } from './action.type';
 const newsServices = new NewsServices(customAxios);
 
-export const getNews = (): CustomThunkAction<NEWS_ACTIONS_TYPE> => {
+export const getNews = (
+  language: string,
+): CustomThunkAction<NEWS_ACTIONS_TYPE> => {
   return dispatch => {
     dispatch({type: GET_NEWS_REQUEST});
-    newsServices
-      .getNews(api.TOP_HEADLINES, {country: 'cu', language: 'es'})
-      .then(
-        resp => {
-          dispatch({type: GET_NEWS_SUCCESS, data: resp.data});
-        },
-        error => dispatch({type: GET_NEWS_FAILURE, data: error}),
-      );
+    newsServices.getNews(api.TOP_HEADLINES, {language}).then(
+      resp => {
+        dispatch({type: GET_NEWS_SUCCESS, data: resp.data});
+      },
+      error => dispatch({type: GET_NEWS_FAILURE, data: error}),
+    );
   };
 };
