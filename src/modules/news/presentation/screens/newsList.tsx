@@ -9,7 +9,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import { height } from '../../../../shared/utils/constanst';
+import {height} from '../../../../shared/utils/constanst';
 import withReduxConnector, {fromRedux} from '../../application/redux/container';
 import {Card} from '../components/card';
 import Loading from '../components/loading';
@@ -18,13 +18,15 @@ const NewsList: React.FC<fromRedux> = ({
   news,
   error,
   theme,
+  language,
+
   onGetNews,
 }) => {
   const {t} = useTranslation();
   const {colors} = useTheme();
   useEffect(() => {
-    onGetNews();
-  }, []);
+    onGetNews(language === 'es_US' ? 'es' : 'en');
+  }, [language]);
   return (
     <SafeAreaView>
       <View>
@@ -43,8 +45,8 @@ const NewsList: React.FC<fromRedux> = ({
             </Text>
 
             <FlatList
-            showsVerticalScrollIndicator={false}
-              style={{alignSelf: 'center', marginBottom:height/4}}
+              showsVerticalScrollIndicator={false}
+              style={{alignSelf: 'center', marginBottom: height / 4}}
               data={news}
               renderItem={item => <Card key={item.index} article={item.item} />}
             />
