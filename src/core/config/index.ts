@@ -4,7 +4,7 @@ export default {
   appVersion: '1.0.0',
   defaultLanguage: 'en_US',
   languageSupport: [
-    {locale: 'en_US', name: 'Inglish', inglishName: 'Inglish'},
+    {locale: 'en_US', name: 'English', inglishName: 'English'},
     {locale: 'es_US', name: 'Español', inglishName: 'Spanish'},
   ],
   resourcesLanguage: {
